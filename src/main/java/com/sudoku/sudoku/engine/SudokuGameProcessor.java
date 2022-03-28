@@ -2,6 +2,7 @@ package com.sudoku.sudoku.engine;
 
 import com.sudoku.sudoku.domain.SudokuBoard;
 import com.sudoku.sudoku.user.UserChoice;
+import com.sudoku.sudoku.visual.SudokuShowBoard;
 
 import java.util.ArrayList;
 
@@ -34,6 +35,7 @@ public class SudokuGameProcessor {
                         }
                     }
                     Menu.show(board.toString());
+                    SudokuShowBoard.showBoard(board);
                     break;
                 case RESOLVE:
                     try {
@@ -41,7 +43,7 @@ public class SudokuGameProcessor {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    Menu.show(board.toString());
+                    SudokuShowBoard.showBoard(board);
                     Menu.gameAgain();
                     break;
             }

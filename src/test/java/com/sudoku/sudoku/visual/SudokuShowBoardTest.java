@@ -14,15 +14,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class SudokuShowBoardTest {
 
     @Test
-    public void printTheBoard() {
-        //Given
-        SudokuShowBoard sudokuShowBoard = new SudokuShowBoard();
-        SudokuBoard board = new SudokuBoard();
-
-        System.out.println(sudokuShowBoard.showBoard(board));
-    }
-
-    @Test
     public void deletePossibleValues() {
         //Given
         List<Integer> possibleValues = IntStream.rangeClosed(1, 9)

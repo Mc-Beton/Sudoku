@@ -10,8 +10,8 @@ public class SudokuShowBoard {
 
     SudokuBoard board = new SudokuBoard();
 
-    public String showBoard(SudokuBoard board) {
-        String hori = "============================";
+    public static void showBoard(SudokuBoard board) {
+        String hori = "===================";
         String strBoard = "";
         String ele = "";
         for (int col = 0; col < 9; col++) {
@@ -20,12 +20,12 @@ public class SudokuShowBoard {
                 if(board.getBoard().get(col).getRow().get(row).getValue() != -1) {
                     ele = String.valueOf(board.getBoard().get(col).getRow().get(row).getValue());
                 } else {
-                    ele = "  ";
+                    ele = " ";
                 }
                 strRow = strRow + ele + "|";
             }
             strBoard = strBoard + "\n" + hori + "\n" + strRow;
         }
-        return strBoard + "\n" + hori;
+        System.out.println(strBoard + "\n" + hori);
     }
 }
