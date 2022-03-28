@@ -1,7 +1,5 @@
-package com.sudoku.sudoku.engine;
+package com.sudoku.sudoku.user;
 
-import com.sudoku.sudoku.user.UserChoice;
-import com.sudoku.sudoku.user.ChoiceType;
 import lombok.Data;
 
 import java.util.ArrayList;

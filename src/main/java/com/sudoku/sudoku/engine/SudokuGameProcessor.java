@@ -1,6 +1,7 @@
 package com.sudoku.sudoku.engine;
 
 import com.sudoku.sudoku.domain.SudokuBoard;
+import com.sudoku.sudoku.user.Menu;
 import com.sudoku.sudoku.user.UserChoice;
 import com.sudoku.sudoku.visual.SudokuShowBoard;
 
@@ -9,11 +10,9 @@ import java.util.ArrayList;
 public class SudokuGameProcessor {
 
     private SudokuBoard board;
-    private SudokuSolver sudokuSolver;
 
-    public boolean resolveSudoku() throws Exception {
+    public boolean resolveSudoku() {
         board = new SudokuBoard();
-        sudokuSolver = new SudokuSolver();
 
         boolean finishGame = false;
         do {
@@ -27,7 +26,6 @@ public class SudokuGameProcessor {
                     break;
                 case NEW_GAME:
                     board = new SudokuBoard();
-                    sudokuSolver = new SudokuSolver();
                 case SET_VALUE:
                     if (userChoices.size() >= 1) {
                         for (UserChoice userChoice: userChoices) {
@@ -39,7 +37,7 @@ public class SudokuGameProcessor {
                     break;
                 case RESOLVE:
                     try {
-                        sudokuSolver.solveBoard();
+                        SudokuSolver.solveBoard(board);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

@@ -8,7 +8,7 @@ public class SudokuSolver {
 
     private SudokuBoard board;
 
-    public void solveBoard() {
+    public static void solveBoard(SudokuBoard board) {
         for (int col = 0; col < 9; col++) {
             for (int row = 0; row < 9; row++) {
                 if (board.getPossibleValuesInCell(row, col).size() == 1) {

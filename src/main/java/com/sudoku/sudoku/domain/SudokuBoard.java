@@ -62,7 +62,7 @@ public class SudokuBoard {
 
     private int determineSquare(int pos) {
         if(pos<=2) {return 0;}
-        else if(pos>=3 && pos<=5) {return 3;}
+        else if(pos<=5) {return 3;}
         else {return 6;}
     }
 
